@@ -14,9 +14,9 @@ import java.util.List;
  * @Date:Created in 2018/1/24 10:04.
  * @Modified By:
  */
-@Data
-@ToString
-@Document(collection = "cms_page")
+@Data   //可以自动生成getter/setter方法
+@ToString   //ToString生成tostring方法
+@Document(collection = "cms_page")   //Spring Data mongodb提供的注解，最终CMS的开发会使用Mongodb数据库。
 public class CmsPage {
     /**
      * 页面名称、别名、访问地址、类型（静态/动态）、页面模版、状态

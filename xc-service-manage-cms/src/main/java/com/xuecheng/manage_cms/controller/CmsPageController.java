@@ -19,6 +19,7 @@ public class CmsPageController implements CmsPageControllerApi {
 
     /**
      * 分页查询模板页面
+     *
      * @param page
      * @param size
      * @param queryPageRequest
@@ -37,11 +38,12 @@ public class CmsPageController implements CmsPageControllerApi {
         queryResult.setTotal(2);
         QueryResponseResult queryResponseResult= new QueryResponseResult(CommonCode.SUCCESS,queryResult);
         return queryResponseResult;  */
-        return   pageService.findList(page,size,queryPageRequest);
+        return pageService.findList(page, size, queryPageRequest);
     }
 
     /**
      * 添加页面
+     *
      * @param cmsPage
      * @return
      */
@@ -70,9 +72,10 @@ public class CmsPageController implements CmsPageControllerApi {
      * @return
      */
     @Override
-    public CmsPageResult update(@PathVariable("id") String id,@RequestBody CmsPage cmsPage) {
-        return pageService.update(id,cmsPage);
+    public CmsPageResult update(@PathVariable("id") String id, @RequestBody CmsPage cmsPage) {
+        return pageService.update(id, cmsPage);
     }
+
     @GetMapping("/delete/{id}")
     /**
      * 根据id删除页面
@@ -83,5 +86,4 @@ public class CmsPageController implements CmsPageControllerApi {
     public ResponseResult delete(@PathVariable("id") String id) {
         return pageService.delete(id);
     }
-
 }

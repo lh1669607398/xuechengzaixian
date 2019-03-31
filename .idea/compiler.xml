@@ -7,13 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="freemarker-test" />
-        <module name="test-rabbitmq-consumer" />
-        <module name="test-rabbitmq-producer" />
         <module name="xc-framework-common" />
-        <module name="xc-framework-model" />
         <module name="xc-framework-utils" />
-        <module name="xc-service-api" />
-        <module name="xc-service-manage-cms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
